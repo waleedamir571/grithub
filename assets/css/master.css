@@ -152,19 +152,41 @@ text-transform: uppercase;
 
 
 
+
+
 .gotham {
   font-family: 'Montserrat', sans-serif;
 }
 
-.growth{
-  color: rgba(255, 255, 255, 0.37);
+.bg {
+  background-image: url(../imgs/home/bg.png);
+  background-size: cover;
+  padding: 20px;
+  background-color: black;
+  height: 35rem;
+}
 
-font-size: 80px;
-font-style: normal;
-font-weight: 800;
-line-height: 80px;
-letter-spacing: var(--Display-Medium-Tracking, 0px);
-text-transform: uppercase;
+
+.growth {
+  color: transparent; /* Make text transparent */
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 80px;
+  letter-spacing: var(--Display-Medium-Tracking, 0px);
+  text-transform: uppercase;
+  background-image: url(../imgs/home/bg.png); /* Apply background image */
+  background-size: cover;
+  -webkit-background-clip: text; /* Clip background to text for WebKit browsers */
+  background-clip: text; /* Clip background to text */
+  margin: 0; /* Remove default margin */
+}
+
+.red1 {
+   color: #B22222; /* Red color for the GRIT letters */
+  background: none; /* Remove background image for red letters */
+  -webkit-background-clip: unset; /* Unset background clipping */
+  background-clip: unset; /* Unset background clipping */
 }
 
 .red1{
