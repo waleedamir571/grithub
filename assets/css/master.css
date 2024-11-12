@@ -75,6 +75,16 @@ a:hover {
   align-items: baseline;
 }
 
+.footer-text{
+  color: #2E2E2E;
+
+font-size: 14.025px;
+font-style: normal;
+font-weight: 500;
+line-height: 26.297px; /* 187.5% */
+text-transform: uppercase;
+}
+
 .top-10{
   position: relative;
   top: -10rem;
@@ -8224,7 +8234,7 @@ img {
 }
 
 .cxu__service.style-2 .service-item:hover {
-  background-color: var(--green);
+  background-color: #0E0E0E;
 }
 
 .cxu__service.style-2 .service-item:hover .icon {
@@ -11025,9 +11035,8 @@ img {
 .footer__btm-wrapper {
   padding-top: 30px;
   padding-bottom: 30px;
-  background-color: #312660;
+  background-color: transparent;
 }
-
 .footer__address-4 .address li a, .footer__address-4 .address li a:not([href]) {
   font-size: 20px;
   color: var(--white);
