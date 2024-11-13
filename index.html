@@ -57,44 +57,39 @@
       <div class="container">
         <div class="row">
           <header class="header__area">
-
-
             <div class="col-md-2">
               <div class="header__logo">
                 <a href="index.html"><img src="assets/imgs/home/logo.png" alt="Logo"></a>
               </div>
             </div>
-            <div class="col-md-4 offset-md-5">
-              <div class="header__menu">
-                <nav class="main-menu">
-                  <ul>
-                    <li class=""><a href="#">About</a>
-
-                    </li>
-                    <li class=""><a href="#">Services</a>
-
-                    </li>
-                    <li class=""><a href="#">Careers</a>
-
-                    </li>
-
-                    <li><a href="#">Contact</a></li>
-                  </ul>
-                </nav>
-              </div>
+            
+            <!-- Toggle Button for Mobile View -->
+            <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            
+            <div class="col-md-4 offset-md-5 header__menu" id="mobileMenu">
+              <button class="close-menu" onclick="toggleMobileMenu()">✖</button>
+              <nav class="main-menu">
+                <ul>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Services</a></li>
+                  <li><a href="#">Careers</a></li>
+                  <li><a href="#">Contact</a></li>
+                </ul>
+              </nav>
             </div>
           </header>
         </div>
-
       </div>
-
+      
       <!-- Header section end -->
 
 
       <!-- Mobile Menu start -->
-      <div class="mobile__menu">
-        <button class="close__menu"><i class="fa-solid fa-xmark"></i></button>
-      </div>
+     
       <!-- Mobile Menu end -->
 
 
@@ -306,6 +301,24 @@
 </html>
 
 <script>
+  function toggleMobileMenu() {
+    const mobileMenu = document.getElementById("mobileMenu");
+    mobileMenu.style.display = (mobileMenu.style.display === "block") ? "none" : "block";
+  }
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggleButton = document.querySelector(".mobile-menu-toggle");
+    const menu = document.querySelector(".header__menu");
+
+    toggleButton.addEventListener("click", function () {
+      menu.classList.toggle("active");
+    });
+  });
+</script>
+
+<script>
   // Initialize AOS
   AOS.init({
     duration: 1000, // Duration of animation in ms (1 second)
@@ -315,25 +328,40 @@
 
 <script>
   // Ensure GSAP is ready
-  gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 
-  // Function to create scroll-dependent animation for text
-  function createScrollAnimation(selector) {
-    gsap.to(selector, {
-      scale: 0.5, // Scale down to 50%
-      scrollTrigger: {
-        trigger: selector, // Trigger based on the text element
-        start: "top 80%", // Start when the top of the text hits 80% of the viewport height
-        end: "top 30%", // End when the top of the text hits 30% of the viewport height
-        scrub: 0.5, // Smooth scrubbing effect
-        markers: false // Remove markers for debugging
-      },
-      ease: "none" // No easing for a smooth transition
-    });
-  }
+// Function to create scroll-dependent animation for text
+function createScrollAnimation(selector) {
+  // Define the start and end points based on the screen width
+  const isMobile = window.innerWidth <= 768;
+  let startValue = isMobile ? "top 95%" : "top 80%";
+  let endValue = isMobile ? "top 50%" : "top 30%";
 
-  // Create animations for both text elements
-  createScrollAnimation('.agency');
-  createScrollAnimation('.services');
-  createScrollAnimation('.our-team');
+  // Set up the animation with ScrollTrigger options for better responsiveness
+  gsap.to(selector, {
+    scale: 0.5, // Scale down to 50%
+    scrollTrigger: {
+      trigger: selector, 
+      start: startValue,
+      end: endValue,
+      scrub: 0.5,
+      markers: false, 
+      invalidateOnRefresh: true, // Re-evaluate on resize or orientation change
+      onUpdate: (self) => {
+        // Ensure scaling applies smoothly during scroll
+        gsap.set(selector, { scale: self.progress * 0.5 + 0.5 });
+      }
+    },
+    ease: "none"
+  });
+}
+
+// Apply the scroll animation function
+createScrollAnimation('.agency');
+
+// Add a listener to recreate animations on resize for full responsiveness
+window.addEventListener("resize", () => {
+  ScrollTrigger.refresh(); // Recalculates trigger positions
+});
+
 </script>
