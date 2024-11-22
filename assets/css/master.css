@@ -380,7 +380,7 @@ a:hover {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 100px 200px 200px;
+  padding: 150px 200px 200px;
   position: relative;
 }
 
@@ -4763,7 +4763,7 @@ p {
 
 @media (max-width: 1919px) {
   .cxu--hero-slider.style-1 .slide {
-    padding: 260px 120px 150px;
+    padding: 60px 120px 150px;
   }
 }
 
