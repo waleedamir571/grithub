@@ -76,7 +76,7 @@
                 <ul>
                   <li><a href="#">About</a></li>
                   <li><a href="services.php">Services</a></li>
-                  <li><a href="#">Careers</a></li>
+                  <li><a href="careers.php">Careers</a></li>
                   <li><a href="#">Contact</a></li>
                 </ul>
               </nav>

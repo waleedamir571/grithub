@@ -72,8 +72,60 @@
 
 }
 
+.cxu-btn-border {
+  /* gap: 10px; */
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--white);
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  /* display: inline-flex
+; */
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 10px 25px;
+  border-radius: 30px;
+  /* border: 1px solid var(--white-3); */
+  /* position: relative; */
+  /* overflow: hidden; */
+  /* z-index: 1; */
+  border-radius: 12px;
+  background: var(--Red-color-From-Logo, #EB1A26);
+  box-shadow: 15.4px 33.6px 69.44px 8.4px rgba(235, 26, 38, 0.34);
+}
+
+.ptb-40{
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
 .auto{
   max-width: auto !important;
+}
+
+.svg-normal {
+  transition: opacity 0.3s ease;
+}
+
+/* Hover state SVG */
+.svg-hover {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  left: 63%;
+  top: -24%;
+  /* height: 95px; */
+}
+
+/* Apply Now hover effect */
+.apply-btn:hover .svg-normal {
+  opacity: 0;
+}
+
+.apply-btn:hover .svg-hover {
+  opacity: 1;
 }
 
 .users{
@@ -95,6 +147,96 @@
 
 }
 
+.container2 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.designer{
+  color: #FFF;
+  font-family: Manrope;
+  font-size: 26.102px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 43.503px
+}
+
+
+/* The box in the center of the screen */
+.box {
+  display: flex
+;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0E0E0E;
+  padding: 10px 20px;
+  width: 100%;
+  border-radius: 10px;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
+
+.oppur{
+ 
+    color: #9c9c9c;
+    font-size: 331px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 356px;
+    letter-spacing: -2.56px;
+    text-transform: uppercase;
+    transition: transform 0.3s ease;
+    text-align: center;
+    margin-top: 100px;
+    /* text-align: center; */
+    transform-origin: center;
+    position: relative;
+    margin-left: -10%;
+
+
+
+}
+
+.top-15{
+  position: relative;
+    top: 15%;
+}
+
+.fw-600{
+  font-weight: 600 !important;
+}
+/* Left side text */
+
+.text12{
+  color: #FFF;
+text-align: center;
+
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 40px; /* 200% */
+letter-spacing: var(--Display-Medium-Tracking, 0px);
+}
+
+/* Right side text */
+.right-text {
+  color: #FFF;
+  text-align: center;
+  font-size: 24.1px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 42px;
+  display: flex
+;
+  cursor: pointer;
+  position: relative;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  justify-content: flex-end;
+  align-items: center;
+}
 .container1 {
   display: flex
 ;
@@ -639,6 +781,104 @@ a:hover {
   .pb-100 {
     padding-bottom: 60px;
   }
+
+  /* Ensure containers do not overflow */
+.container,
+.container1,
+.row {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+img, .service-item {
+    max-width: 100%;
+    height: auto; /* Keep images responsive */
+}
+
+/* Ensure sections that should not overflow */
+section {
+    width: 100%;
+    overflow: hidden;
+}
+/* Example for responsive sections */
+.hero__area-4, .cxu__service {
+  width: 100%;
+  max-width: 100%;
+}
+
+  .top-15 {
+    position: relative;
+    top: 15%;
+    width: 100%;
+    padding-bottom: 19px;
+}
+
+.right-text {
+  color: #FFF;
+  text-align: center;
+  font-size: 13.1px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 42px;
+  display: flex
+;
+  cursor: pointer;
+  position: relative;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  justify-content: flex-end;
+  align-items: center;
+}
+.designer {
+  color: #FFF;
+  font-family: Manrope;
+  font-size: 13.102px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 25.503px;
+}
+
+.cxu-btn-border {
+  /* gap: 10px; */
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--white);
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  /* display: inline-flex
+; */
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 10px 25px;
+  border-radius: 30px;
+  /* border: 1px solid var(--white-3); */
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  border-radius: 12px;
+  background: var(--Red-color-From-Logo, #EB1A26);
+  box-shadow: 15.4px 33.6px 69.44px 8.4px rgba(235, 26, 38, 0.34);
+}
+
+.oppur {
+  color: #9c9c9c;
+  font-size: 77px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 356px;
+  letter-spacing: -2.56px;
+  text-transform: uppercase;
+  transition: transform 0.3s ease;
+  text-align: center;
+  margin-top: 100px;
+  /* text-align: center; */
+  transform-origin: center;
+  position: relative;
+  margin-left: -5%;
+}
 
   .container1 {
     display: flex
@@ -1815,25 +2055,7 @@ p {
   width: 100%;
 }
 
-.cxu-btn-border {
-  gap: 10px;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.6;
-  color: var(--white);
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 20px 40px;
-  border-radius: 30px;
-  border: 1px solid var(--white-3);
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-}
+
 
 .dir-rtl .cxu-btn-border i {
   -webkit-transform: rotate(180deg);
