@@ -52,11 +52,8 @@
 
 <!-- Logo slider section start -->
 <section class="service__area-2 pt-140 pb-140" id="services">
-    <div class="container">
-
-        <div class="row">
-
-            <div class="container">
+   
+            <div class="container webkit-center">
                 <div class="row">
                     <div class="col-md-4">
                         <img class="top-15" src="assets/imgs/home/why-us.png" alt="">
@@ -219,13 +216,13 @@
 
 
 
-        </div>
+      
         <br>
 
 
 
 
-    </div>
+   
 </section>
 <!-- Logo slider section end -->
 
@@ -243,7 +240,7 @@
                 <div class="container2">
                     <div class="box">
                         <div class="left-text designer manrope">Multimedia Designer</div>
-                        <div class="right-text manrope apply-btn">
+                   <a href="career-details.php">     <div class="right-text manrope apply-btn">
                             APPLY NOW &nbsp;
                             <svg xmlns="http://www.w3.org/2000/svg" class="svg-normal" width="51" height="51"
                                 viewBox="0 0 61 61" fill="none">
@@ -283,7 +280,7 @@
                                     </filter>
                                 </defs>
                             </svg>
-                        </div>
+                        </div></a>
                     </div>
                 </div>
 
